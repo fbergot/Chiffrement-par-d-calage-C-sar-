@@ -8,7 +8,7 @@ const div2 = document.querySelector('#div2');
 
 const button = document.querySelector('#but1')
     .addEventListener('click', () => code((input.value).split(''), Number.parseInt(inputDec.value)));
-    
+
 const button2 = document.querySelector('#but2')
     .addEventListener('click', () => decode((input2.value).split(""), Number.parseInt(inputDec.value)));
 
@@ -41,6 +41,11 @@ function code(message, dec) {
     div.textContent = message.join("");
 }
 
+/**
+ * Décode avec le décalage
+ * @param {string} message
+ * @param {number} dec
+ */
 function decode(message, dec) {
     for (let i = 0; i < message.length; i++) {
             for (let j = 0; j < alphabet.length; j++) {
