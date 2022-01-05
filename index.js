@@ -16,7 +16,7 @@ const button2 = document.querySelector('#but2')
 /**
  * code le message avec le decalage founit
  * 
- * @param {string} message
+ * @param {string[]} message
  * @param {number} dec
  */
 function code(message, dec) {
@@ -44,7 +44,7 @@ function code(message, dec) {
 
 /**
  * Décode avec le décalage
- * @param {string} message
+ * @param {string[]} message
  * @param {number} dec
  */
 function decode(message, dec) {
