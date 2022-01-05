@@ -20,6 +20,7 @@ const button2 = document.querySelector('#but2')
  * @param {number} dec
  */
 function code(message, dec) {
+    let newIndex;
     for (let i = 0; i < message.length; i++) {
         for (let j = 0; j < alphabet.length; j++) {
             if (j < alphabet.length - dec) {
@@ -31,7 +32,7 @@ function code(message, dec) {
                 }           
             } else {
                 if (message[i] === alphabet[j]) {
-                    const newIndex = dec - (alphabet.length - j);
+                    newIndex = dec - (alphabet.length - j);
                     message[i] = alphabet[newIndex];
                     break;
                 }               
@@ -47,6 +48,7 @@ function code(message, dec) {
  * @param {number} dec
  */
 function decode(message, dec) {
+    let newIndex;
     for (let i = 0; i < message.length; i++) {
             for (let j = 0; j < alphabet.length; j++) {
                 if (j > 0 + (dec - 1 )) {
@@ -58,7 +60,7 @@ function decode(message, dec) {
                     }           
                 } else {
                     if (message[i] === alphabet[j]) {
-                        const newIndex = alphabet.length - (dec - j);
+                        newIndex = alphabet.length - (dec - j);
                         message[i] = alphabet[newIndex];
                         break;
                     }               
